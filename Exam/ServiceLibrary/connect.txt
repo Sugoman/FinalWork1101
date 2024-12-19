@@ -1,0 +1,40 @@
+Scaffold-DbContext "Data Source = HOME-PC\MSSQLSERVER2; Initial Catalog = Exam; User ID = sa; Password = sa; Trust Server Certificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -ContextDir Data -Context FragrantWorldContext -Tables Role, User, Order, Product, OrderProduct
+
+
+ORDER POST
+{
+  "OrderId": 21,
+  "OrderComposition": "saddsasad",
+  "OrderCount": 0,
+  "OrderDate": "2024-12-18T14:43:19.649Z",
+  "OrderDeliveryDate": "2024-12-18T14:43:19.649Z",
+  "OrderPickupPointId": 33,
+  "OrderClientSurname": "string",
+  "OrderClientFirstName": "string",
+  "OrderClientPatronymic": "string",
+  "OrderCode": 0,
+  "OrderStatus": "string",
+  "OrderPickupPoint": {
+    "PickupPointId": 33,
+    "PickupPointIndex":123123,
+    "PickupPointCity": "saddasads",
+    "PickupPointStreet": "adsads",
+    "PickupPointHouse": 2,
+    "Orders": []
+  },
+  "ProductArticleNumbers": [
+    {
+      "ProductArticleNumber": "saddsa",
+      "ProductName": "asdsadasd",
+      "ProductDescription": "stsadasdsad asd as dasd as dring",
+      "ProductCategory": "asd",
+      "ProductPhoto": "iVBORw0KGgoAAAANSUhEUgAAAAUA",
+      "ProductManufacturer": "sad  dsaadsasd",
+      "ProductCost": 1231,
+      "ProductDiscountAmount": 123,
+      "ProductQuantityInStock": 1,
+      "ProductStatus": "string",
+      "Orders": []
+    }
+  ]
+}

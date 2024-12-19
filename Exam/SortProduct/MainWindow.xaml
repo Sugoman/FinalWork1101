@@ -1,0 +1,43 @@
+﻿<Window x:Class="SortProduct.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SortProduct"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1000">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <StackPanel>
+                <TextBlock Text="Произовдитель" HorizontalAlignment="Center"/>
+                <ComboBox x:Name="ManufacturerComboBox" Width="150" Margin="0,0,10,0" SelectionChanged="OnFilterChanged"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Мин. цена" HorizontalAlignment="Center"/>
+                <TextBox x:Name="MinPriceTextBox" Width="100" Margin="0,0,10,0" TextChanged="OnFilterChanged"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Макс. цена" HorizontalAlignment="Center"/>
+                <TextBox x:Name="MaxPriceTextBox" Width="100" Margin="0,0,10,0" TextChanged="OnFilterChanged"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Поиск" HorizontalAlignment="Center"/>
+                <TextBox x:Name="SearchTextBox" Width="200" Margin="0,0,10,0" TextChanged="OnFilterChanged"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Сортировка по цене" HorizontalAlignment="Center"/>
+                <ComboBox x:Name="SortComboBox" Width="150" SelectionChanged="OnFilterChanged">
+                    <ComboBoxItem Content="Цена по возрастанию" />
+                    <ComboBoxItem Content="Цена по убыванию" />
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+        <Label x:Name="DataCountLabel" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <DataGrid x:Name="ProductsDataGrid" Grid.Row="1" IsReadOnly="True"/>
+
+    </Grid>
+</Window>
